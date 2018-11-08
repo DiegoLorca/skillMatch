@@ -1,3 +1,5 @@
-<h1>Bienvenido!!!</h1>
-<p>Te invitamos a seguir complentando tus datos</p>
-<%= link_to "AQUÍ!!!", edit_user_registration_path %>
+<div class="container">
+  <h1>Bienvenido  <%= current_user.name %>!!!</h1>
+  <p>Te invitamos a seguir complentando tus datos</p>
+  <%= link_to "AQUÍ!!!", edit_user_registration_path %>
+</div>
