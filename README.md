@@ -1,24 +1,5 @@
-# README
+* me falta crear el if en el index, donde si es un usuario registrado por primera vez, me muestre
+la bienvenida y el link para el edit_user_registration... si no, que me muestre el buscador
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* dashboard tiene que estar en el navbar como una opcion, dentro del dashboard tiene que estar el
+calendario, la evaluacion muestra en barra y la cantidad de match, junto con sus habilidades.
