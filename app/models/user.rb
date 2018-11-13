@@ -8,4 +8,6 @@ class User < ApplicationRecord
  has_many :skills, through: :user_skills
  has_many :wishlists
  has_many :skills, through: :wishlists
+
+ accepts_nested_attributes_for :skills
 end

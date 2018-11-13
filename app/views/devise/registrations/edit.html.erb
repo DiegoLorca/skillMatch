@@ -5,7 +5,7 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :username %><br />
+      <%= f.label :name %><br />
       <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
     </div>
 
@@ -13,6 +13,25 @@
       <%= f.label :birthdate %><br />
       <%= f.date_field :birthdate, autocomplete: "birthdate" %>
     </div>
+
+    <%= f.fields_for :skills do |s| %>
+    <div class="form-group">
+      <div class="field">
+        <%= s.label :name, 'Nombre de habilidad' %><br/ >
+        <%= s.text_field :name, autocomplete: "name" %>
+      </div>
+      <div class="field">
+        <%= s.label :description, 'Descripción de la habilidad' %><br/ >
+        <%= s.text_field :description, autocomplete: "description" %>
+      </div>
+      <div class="field">
+        <%= s.label :price, 'Precio por hora' %><br/ >
+        <%= s.text_field :price, autocomplete: "price" %>
+      </div>
+    </div>
+
+    <% end %>
+
 
     <div class="field">
       <%= f.label :biography %><br />
@@ -29,8 +48,6 @@
       <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
       <%= f.password_field :current_password, autocomplete: "current-password" %>
     </div>
-
-    <%= link_to "Habilidades", new_skill_path %>
 
     <div class="actions">
       <%= f.submit "Update" %>

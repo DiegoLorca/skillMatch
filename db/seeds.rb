@@ -9,6 +9,6 @@ User.destroy_all
 Skill.destroy_all
 
 8.times do |i|
-  User.create(name: "User #{i}", email: "email#{i}@gmail.com", password: "12345678", username: "Usuario#{i}", birthdate: "0#{i}-04-1991", district: "Santiago", biography: "Comentario de algo.")
+  User.create(name: "User #{i}", email: "email#{i}@gmail.com", password: "12345678", username: "Usuario#{i}", birthdate: "0#{i}-04-1991", biography: "Comentario de algo.")
   Skill.create(name: "Skill #{i}", description: "Esta es una descripcion.", price: "199#{i}")
 end
