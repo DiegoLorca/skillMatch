@@ -14,25 +14,6 @@
       <%= f.date_field :birthdate, autocomplete: "birthdate" %>
     </div>
 
-    <%= f.fields_for :skills do |s| %>
-    <div class="form-group">
-      <div class="field">
-        <%= s.label :name, 'Nombre de habilidad' %><br/ >
-        <%= s.text_field :name, autocomplete: "name" %>
-      </div>
-      <div class="field">
-        <%= s.label :description, 'Descripción de la habilidad' %><br/ >
-        <%= s.text_field :description, autocomplete: "description" %>
-      </div>
-      <div class="field">
-        <%= s.label :price, 'Precio por hora' %><br/ >
-        <%= s.text_field :price, autocomplete: "price" %>
-      </div>
-    </div>
-
-    <% end %>
-
-
     <div class="field">
       <%= f.label :biography %><br />
       <%= f.text_area :biography, autocomplete: "biography" %>

@@ -1,1 +1,183 @@
-hola
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span data-feather="home"></span>
+              Dashboard <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= edit_user_registration_path %>">
+              <%= current_user.name %>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= skills_path %>">
+              <span data-feather="shopping-cart"></span>
+              Mis habilidades
+            </a>
+          </li>
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Guardar reporte</span>
+          <a class="d-flex align-items-center text-muted" href="#">
+            <span data-feather="plus-circle"></span>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Descargar pdf
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button class="btn btn-sm btn-outline-secondary"><%= link_to 'Match por día', root_path %></button>
+            <button class="btn btn-sm btn-outline-secondary"><%= link_to 'Evaluaciones', root_path %></button>
+          </div>
+          <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            Por semana
+          </button>
+        </div>
+      </div>
+
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
+      <h2>Mis Match</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Comuna</th>
+              <th>Habilidad</th>
+              <th>Evaluación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1,001</td>
+              <td>Edda</td>
+              <td>Peñaflor</td>
+              <td>Dormir</td>
+              <td>5 ★</td>
+            </tr>
+            <tr>
+              <td>1,002</td>
+              <td>Patricio</td>
+              <td>Peñaflor</td>
+              <td>Matemáticas</td>
+              <td>5 ★</td>
+            </tr>
+            <tr>
+              <td>1,003</td>
+              <td>Nicolas</td>
+              <td>Tomé</td>
+              <td>Lenguaje</td>
+              <td>4 ★</td>
+            </tr>
+            <tr>
+              <td>1,003</td>
+              <td>Máximo</td>
+              <td>Tomé</td>
+              <td>Fisica</td>
+              <td>5 ★</td>
+            </tr>
+            <tr>
+              <td>1,004</td>
+              <td>Ingrid</td>
+              <td>La Florida</td>
+              <td>Inglés</td>
+              <td>4 ★</td>
+            </tr>
+            <tr>
+              <td>1,005</td>
+              <td>Abraham</td>
+              <td>Peñaflor</td>
+              <td>Guitarra</td>
+              <td>3 ★</td>
+            </tr>
+            <tr>
+              <td>1,006</td>
+              <td>Roberto</td>
+              <td>Malloco</td>
+              <td>Fútbol</td>
+              <td>3 ★</td>
+            </tr>
+            <tr>
+              <td>1,007</td>
+              <td>Patricia</td>
+              <td>Providencia</td>
+              <td>Quimica</td>
+              <td>4 ★</td>
+            </tr>
+            <tr>
+              <td>1,008</td>
+              <td>Ximena</td>
+              <td>La Cisterna</td>
+              <td>Nutrición</td>
+              <td>4 ★</td>
+            </tr>
+            <tr>
+              <td>1,009</td>
+              <td>José</td>
+              <td>Providencia</td>
+              <td>Debate</td>
+              <td>3 ★</td>
+            </tr>
+            <tr>
+              <td>1,010</td>
+              <td>Gloria</td>
+              <td>Maipu</td>
+              <td>Horoscopo</td>
+              <td>4 ★</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+<script>
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado", "Domingo"],
+      datasets: [{
+        data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#007bff',
+        borderWidth: 4,
+        pointBackgroundColor: '#007bff'
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: false
+          }
+        }]
+      },
+      legend: {
+        display: false,
+      }
+    }
+  });
+</script>

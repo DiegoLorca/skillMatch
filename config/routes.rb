@@ -4,6 +4,7 @@ Rails.application.routes.draw do
         registrations: 'users/registrations'
       }
   get 'pages/index'
+  get 'pages/dashboard'
 
   root 'pages#index'
 

@@ -10,4 +10,13 @@ class User < ApplicationRecord
  has_many :skills, through: :wishlists
 
  accepts_nested_attributes_for :skills
+
+ # def completed_profile?
+ #   if name,birthdate,biography,photo==present?
+ #     true
+ #   else
+ #     false
+ #   end
+ # end
+ 
 end
