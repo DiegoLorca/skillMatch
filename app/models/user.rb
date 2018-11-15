@@ -11,12 +11,12 @@ class User < ApplicationRecord
 
  accepts_nested_attributes_for :skills
 
- # def completed_profile?
- #   if name, birthdate, biography, photo == present?
- #     true
- #   else
- #     false
- #   end
- # end
+ def completed_profile?
+   if name.present? && birthdate.present? && biography.present? && photo.present?
+     true
+   else
+     false
+   end
+ end
 
 end

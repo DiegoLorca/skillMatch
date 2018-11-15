@@ -12,20 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name, "Nombre de la habilidad" %><br/ >
     <%= form.text_field :name, id: :skill_name %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :description, "Descripción de la habilidad" %><br/ >
     <%= form.text_area :description, id: :skill_description %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label :price, "Precio por hora" %><br/ >
     <%= form.number_field :price, id: :skill_price %>
   </div>
-
+  <br>
   <div class="actions">
     <%= form.submit %>
   </div>

@@ -1,6 +1,9 @@
-<h1>Editing Skill</h1>
+<div class="container">
+  <h1>Editing Skill</h1>
 
-<%= render 'form', skill: @skill %>
+  <%= render 'form', skill: @skill %>
 
-<%= link_to 'Show', @skill %> |
-<%= link_to 'Back', skills_path %>
+  <%= link_to 'Show', @skill %> |
+
+</div>
+<%= link_to 'Volver', skills_path, class:"btn btn-primary btn-lg btn-block" %>
