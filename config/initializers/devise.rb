@@ -9,7 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '680af31049b10cd06c39cb40fa26b4611bad741f9289729f819d8a9b60262aa5e99c81cee782c7316e8e100067f593161ea72bcc3f0482ea5c786ab692543a51'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -41,7 +41,7 @@ Devise.setup do |config|
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [:email]
-
+  config.secret_key = 'ecebcfe9e595c1147e95dfcf440b265e5987be4bbab0cb67931bab2ed58534e36b404d82e5642931984882abd2b34f1020d3155c6596db103947ac5644f8a1fb'
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
   # find_for_authentication method and considered in your model lookup. For instance,
