@@ -1,8 +1,28 @@
 <div class="container">
-  <h1>Bienvenido!</h1>
-  <h2>¿Qué habilidad deseas buscar?</h2>
-  <input type="text" name="" value="">
-  <h2>Escribe una dirección o selecciona tu ubicación</h2>
-  
-  <%= link_to "AQUÍ!!!", edit_user_registration_path %>
+  <% if current_user.name == present? %>
+    <h1>Bienvenido!</h1>
+    <h2>¿Qué habilidad deseas buscar?</h2>
+    <input type="text" name="" value="">
+    <h2>Escribe una dirección o selecciona tu ubicación</h2>
+
+    <%= link_to "AQUÍ!!!", edit_user_registration_path %>
+  <% else %>
+    <div class="row">
+      <% @users.each_slice(3) do |row|  %>
+        <% row.each do |user| %>
+          <div class="col">
+            <div class="card">
+              <%= image_tag user.photo, class: 'card-img-top' %>
+              <div class="body">
+                <h5><%= user.name %></h5>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <div class="w-100">
+
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
