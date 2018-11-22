@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  kind: MyString
   user: one
   skill: one
 
 two:
+  kind: MyString
   user: two
   skill: two

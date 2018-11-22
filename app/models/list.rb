@@ -1,4 +1,4 @@
-class UserSkill < ApplicationRecord
+class List < ApplicationRecord
   belongs_to :user
   belongs_to :skill
 end

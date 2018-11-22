@@ -1,6 +1,7 @@
-class CreateUserSkills < ActiveRecord::Migration[5.1]
+class CreateLists < ActiveRecord::Migration[5.1]
   def change
-    create_table :user_skills do |t|
+    create_table :lists do |t|
+      t.string :kind
       t.references :user, foreign_key: true
       t.references :skill, foreign_key: true
 

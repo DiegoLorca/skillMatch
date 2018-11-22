@@ -4,12 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
- has_many :user_skills
- has_many :skills, through: :user_skills, dependent: :destroy
+ has_many :lists
+ has_many :skills, through: :lists, dependent: :destroy
  has_many :wishlists
  has_many :skills, through: :wishlists
-
- accepts_nested_attributes_for :skills
-
 
 end
