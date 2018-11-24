@@ -15,12 +15,15 @@
   <tbody>
     <% @skills.each do |skill| %>
       <tr>
-        <td><%= skill.name %></td>
+        <td><%= link_to "#{skill.name}", skill %></td>
         <td><%= skill.description %></td>
         <td><%= skill.price %></td>
-        <td><%= link_to 'Show', skill, class:"btn btn-info" %></td>
         <td><%= link_to 'Edit', edit_skill_path(skill), class:"btn btn-success" %></td>
-        <td><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
+        <td>
+          <% if can?(:destroy, skill) %>
+            <i class="fas fa-trash-alt"><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></i>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

@@ -12,6 +12,7 @@
 //
 //= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap
+//= require @fortawesome/fontawesome-free/js/fontawesome
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .

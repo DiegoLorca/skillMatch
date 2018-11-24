@@ -1,12 +1,10 @@
 <div class="container">
   <% if current_user.name == present? %>
     <h1>Bienvenido!</h1>
-    <h2>¿Qué habilidad deseas buscar?</h2>
-    <input type="text" name="" value="">
-    <h2>Escribe una dirección o selecciona tu ubicación</h2>
-
-    <%= link_to "AQUÍ!!!", edit_user_registration_path %>
+    <h2>Al parecer aun te faltan datos por completar...</h2>
+    <h2>Te invitamos a seguir completando tus datos pinchando <%= link_to "AQUÍ!!!", edit_user_registration_path %> </h2>
   <% else %>
+    <h1>Estas personas estan cerca de ti!</h1>
     <div class="row">
       <% @users.each_slice(3) do |row|  %>
         <% row.each do |user| %>
