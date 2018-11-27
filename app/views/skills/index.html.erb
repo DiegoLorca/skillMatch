@@ -1,35 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<h1>Mis Habilidades</h1>
+  <h1>Mis Habilidades</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Nombre de mi habilidad</th>
-      <th>Descripción de habilidad</th>
-      <th>Precio por hora</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @skills.each do |skill| %>
-      <tr>
-        <td><%= link_to "#{skill.name}", skill %></td>
-        <td><%= skill.description %></td>
-        <td><%= skill.price %></td>
-        <td><%= link_to 'Edit', edit_skill_path(skill), class:"btn btn-success" %></td>
-        <td>
-          <% if can?(:destroy, skill) %>
-            <i class="fas fa-trash-alt"><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></i>
-          <% end %>
-        </td>
+  <table class="table">
+    <thead>
+      <tr class="text-center">
+        <th>Nombre de mi habilidad</th>
+        <th>Descripción de habilidad</th>
+        <th>Precio por hora</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @skills.each do |skill| %>
+        <tr class="text-center">
+          <td><%= link_to "#{skill.name}", skill %></td>
+          <td><%= skill.description %></td>
+          <td>$ <%= skill.price %></td>
+          <td><%= link_to '', edit_skill_path(skill), class:"fa fa-pencil-square-o" %></td>
+          <td>
+            <%# <% if can?(:destroy, skill) %>
+              <%= link_to '', skill, method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-trash-o" %>
+            <%# <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
+  <br>
+</div>
 <%= link_to 'Generar nueva habilidad', new_skill_path, class:"btn btn-primary btn-lg btn-block" %>
 <%= link_to 'Volver al Dashboard', pages_dashboard_path, class:"btn btn-success btn-lg btn-block" %>

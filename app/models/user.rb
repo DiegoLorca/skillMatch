@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
  has_many :lists
- has_many :skills, through: :lists, as: :skills, dependent: :destroy
+ has_many :skills, through: :lists, as: :skills
  has_many :wishlists
  has_many :skills, through: :wishlists, as: :wishlists
 

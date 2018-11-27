@@ -1,6 +1,6 @@
 class Skill < ApplicationRecord
   has_many :lists
-  has_many :users, through: :lists, dependent: :destroy
+  has_many :users, through: :lists
   has_many :wishlists
   has_many :users, through: :wishlists
 
