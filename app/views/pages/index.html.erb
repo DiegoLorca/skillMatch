@@ -6,21 +6,17 @@
   <% else %>
     <h1>Estas personas estan cerca de ti!</h1>
     <div class="row">
-      <% @users.each_slice(3) do |row|  %>
-        <% row.each do |user| %>
           <div class="col">
             <div class="card">
-              <%= image_tag user.photo, class: 'card-img-top' %>
+              <%= image_tag @user.photo, class: 'card-img-top' %>
               <div class="body">
-                <h5 class="text-center"><%= user.name %></h5>
+                <h5 class="text-center"><%= @user.name %></h5>
               </div>
             </div>
           </div>
-        <% end %>
         <div class="w-100">
 
         </div>
-      <% end %>
     </div>
   <% end %>
 </div>

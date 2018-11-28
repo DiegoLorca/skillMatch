@@ -9,4 +9,8 @@ class User < ApplicationRecord
  has_many :wishlists
  has_many :skills, through: :wishlists, as: :wishlists
 
+ def self.random(user_id)
+   User.where('id != ?', user_id).order("random()").limit(1).first
+ end
+
 end
