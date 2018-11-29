@@ -10,9 +10,12 @@
       </ul>
     </div>
   <% end %>
+  <!-- necesito hacer que con el selector se puedan elegir los datos -->
+  
 
   <div class="field">
     <%= form.label :name, "Nombre de la habilidad" %><br/ >
+    <%= form.select :name, Skill.pluck(:name, :id) %>
     <%= form.text_field :name, id: :skill_name %>
   </div>
 

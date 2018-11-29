@@ -1,22 +1,101 @@
-<div class="container">
-  <% if current_user.name == present? %>
-    <h1>Bienvenido!</h1>
-    <h2>Al parecer aun te faltan datos por completar...</h2>
-    <h2>Te invitamos a seguir completando tus datos pinchando <%= link_to "AQUÍ!!!", edit_user_registration_path %> </h2>
-  <% else %>
-    <h1>Estas personas estan cerca de ti!</h1>
-    <div class="row">
-          <div class="col">
-            <div class="card">
-              <%= image_tag @user.photo, class: 'card-img-top' %>
-              <div class="body">
-                <h5 class="text-center"><%= @user.name %></h5>
+    <header class="masthead text-white text-center fondo">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row buscador">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">¿Qué habilidad deseas aprender hoy?</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <input type="email" class="form-control form-control-lg" placeholder="Escribir una habilidad...">
+                </div>
+                <div class="col-12 col-md-3">
+                  <a class="btn btn-block btn-lg btn-primary" href="<%= new_user_registration_path %>">Buscar</a>
+                </div>
               </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-screen-desktop m-auto text-primary"></i>
+              </div>
+              <h3>¿Como nació la idea?</h3>
+              <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
             </div>
           </div>
-        <div class="w-100">
-
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-layers m-auto text-primary"></i>
+              </div>
+              <h3>Objetivo de la página</h3>
+              <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-check m-auto text-primary"></i>
+              </div>
+              <h3>¿Como ocuparlo?</h3>
+              <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+            </div>
+          </div>
         </div>
-    </div>
-  <% end %>
-</div>
+      </div>
+    </section>
+
+    <!-- Image Showcases -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+
+          <div class="col-lg-6 order-lg-2 text-white showcase-img imagen1"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>¿Como nació esta idea?</h2>
+            <p class="lead mb-0">Esta idea nació bajo el paradigma del porque tenemos que gastar tanto dinero para poder aprender algo, si podemos intercambiar nuestras habilidades y formar lazos humanos que sean inquebrantables.</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img imagen2"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Objetivo principal</h2>
+            <p class="lead mb-0">El objetivo principal de esta aplicación web, es acercar más a las personas a la educación que ellos deseen, sin gastar un dineral por querer aprender algo. También toma como objetivo juntar a las personas y formar lazos de amistad.</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 order-lg-2 text-white showcase-img imagen3"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>¿Como se ocupa esta aplicación web?</h2>
+            <p class="lead mb-0">El manejo de esta aplicación es relativamente facil, al registrarte, solo pon tus habilidades, luego pon las habilidades que desees aprender. Posteriormente nosotros nos encargaremos de presentarte las mejores propuestas y solo tienes que esperar el match para poder coordinar, lo demás, solo depende de ti. Presta atención en el siguiente video.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">Equipo de trabajo</h2>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <%= image_tag "io.jpeg", class: "img-fluid rounded-circle mb-3 foto" %>
+              <h5>Diego Lorca Ch.</h5>
+              <p class="font-weight-light mb-0">" La perfección hecha persona."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

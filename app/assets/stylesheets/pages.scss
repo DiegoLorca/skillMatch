@@ -1,3 +1,64 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding: 0;
+}
+
+.fondo{
+ width: 100%;
+ background: url('https://static.miweb.padigital.es/var/m_3/3c/3c8/8195/171904-personas-saludandose-frente-a-un-edificio.jpg') 50% 0 no-repeat  fixed;
+ background-color: cover;
+ color: #ccc;
+ height: 600px;
+ margin: 0;
+
+ opacity: .9;
+ background-size: cover;
+}
+.fondo2{
+ width: 100%;
+ background: url('https://static.miweb.padigital.es/var/m_3/3c/3c8/8195/171904-personas-saludandose-frente-a-un-edificio.jpg') 50% 0 no-repeat  fixed;
+ background-color: cover;
+ color: #ccc;
+ height: 850px;
+ margin: 0;
+
+ opacity: .9;
+ background-size: cover;
+}
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.foto {
+  width: 25%;
+}
+.showcase .showcase-text {
+    padding: 3rem;
+ }
+ .showcase .showcase-img {
+    min-height: 30rem;
+ }
+ @media (min-width: 768px) {
+    .showcase .showcase-text {
+        padding: 7rem;
+    }
+ }
+
+.imagen1 {
+ background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh22ezpDXz2aDW4PuIYwTT2NS_ntWRPwMursWsmW0OX7FptyLpTw') center;
+ background-size: cover;
+}
+.imagen2 {
+ background: url('http://noticias.universia.com.ar/net/images/educacion/e/es/est/estudiantes-1432222956128.jpg') center;
+ background-size: cover;
+}
+.imagen3 {
+  background: url('https://pbs.twimg.com/profile_images/955853183737319424/Ggc1ZWWp_400x400.jpg') center;
+  background-size: cover;
+}
+.buscador {
+  padding-top: 250px;
+}

@@ -21,9 +21,9 @@
           <td>$ <%= skill.price %></td>
           <td><%= link_to '', edit_skill_path(skill), class:"fa fa-pencil-square-o" %></td>
           <td>
-            <% if can?(:destroy, Skill) %>
+            <%# <% if can?(:destroy, Skill) %>
               <%= link_to '', skill, method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-trash-o" %>
-            <% end %>
+            <%# <% end %>
           </td>
         </tr>
       <% end %>
@@ -33,4 +33,4 @@
   <br>
 </div>
 <%= link_to 'Generar nueva habilidad', new_skill_path, class:"btn btn-primary btn-lg btn-block" %>
-<%= link_to 'Volver al Dashboard', pages_dashboard_path, class:"btn btn-success btn-lg btn-block" %>
+<%= link_to 'Volver al Dashboard', pages_index_path, class:"btn btn-success btn-lg btn-block" %>
