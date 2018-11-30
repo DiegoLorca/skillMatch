@@ -21,7 +21,8 @@
 
     <div class="field">
       <%= f.label :photo %><br />
-      <%= f.text_field :photo, autocomplete: "photo" %>
+      <%= f.file_field :photo, autocomplete: "photo" %>
+      <%= f.text_field :remote_photo_url, id: :remote_photo_image %>
     </div>
 
 

@@ -20,3 +20,5 @@ se creo el siguiente metodo en models/user
      redirect_to edit_user_registration_path
    end
  end
+
+ # Falto subir la imagen a AWS ocupando S3
