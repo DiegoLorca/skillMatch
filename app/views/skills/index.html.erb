@@ -21,9 +21,9 @@
           <td>$ <%= skill.price %></td>
           <td><%= link_to '', edit_skill_path(skill), class:"fa fa-pencil-square-o" %></td>
           <td>
-            <%# <% if can?(:destroy, Skill) %>
+
               <%= link_to '', skill, method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-trash-o" %>
-            <%# <% end %>
+            
           </td>
         </tr>
       <% end %>
